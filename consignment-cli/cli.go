@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 
-	pb "playground/shipper/consignment-service/proto/consignment"
+	pb "github.com/artemzi/grpc-playing/consignment-service/proto/consignment"
 
 	microclient "github.com/micro/go-micro/client"
 	"github.com/micro/go-micro/cmd"

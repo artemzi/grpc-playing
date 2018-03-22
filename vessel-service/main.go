@@ -5,7 +5,7 @@ import (
 	"errors"
 	"fmt"
 
-	pb "playground/shipper/vessel-service/proto/vessel"
+	pb "github.com/artemzi/grpc-playing/vessel-service/proto/vessel"
 
 	"github.com/micro/go-micro"
 )
