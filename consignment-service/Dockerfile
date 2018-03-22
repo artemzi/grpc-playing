@@ -1,7 +1,19 @@
-FROM debian:latest
+FROM golang:1.10 as builder
+
+WORKDIR /go/src/playground/shipper/consignment-service
+
+COPY . .
+
+RUN go get -u github.com/golang/dep/cmd/dep
+RUN dep init && dep ensure
+RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo .
+
+FROM alpine:latest
+
+RUN apk --no-cache add ca-certificates
 
 RUN mkdir /app
 WORKDIR /app
-ADD consignment-service /app/consignment-service
+COPY --from=builder /go/src/playground/shipper/consignment-service/consignment-service .
 
-CMD [ "./consignment-service" ]
+CMD ["./consignment-service"]
