@@ -54,5 +54,5 @@ func main() {
 	if err != nil {
 		log.Fatalf("Could not greet: %v", err)
 	}
-	log.Printf("Created: %t", r.Created)
+	log.Printf("Created: %t\n> %v\n", r.Created, r.Consignment)
 }
