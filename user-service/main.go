@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	pb "github.com/artemzi/grpc-playing/vessel-service/proto/user"
+	pb "github.com/artemzi/grpc-playing/user-service/proto/user"
 	"github.com/micro/go-micro"
 )
 
