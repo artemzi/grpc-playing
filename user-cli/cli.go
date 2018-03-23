@@ -78,3 +78,13 @@ func main() {
 		log.Println(err)
 	}
 }
+
+/*
+	USE it with:
+
+	docker-compose run user-cli command \
+	--name="Artem Zinoviev" \
+	--email="arzinoviev@gmail.com" \
+	--password="Testing123" \
+	--company="BBC"
+*/
